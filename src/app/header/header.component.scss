@@ -1,0 +1,21 @@
+header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  height: 109px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  img {
+    height: 35px;
+  }
+}
+
+nav {
+  font-size: 23px;
+  a {
+    margin-left: 29px;
+  }
+}

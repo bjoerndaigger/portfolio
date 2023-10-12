@@ -1,0 +1,18 @@
+.content {
+    display: flex;
+    align-items: center;
+}
+
+.content-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.headline {
+    display: flex;
+}
+
+.headline-left {
+    rotate: 270deg;
+}
