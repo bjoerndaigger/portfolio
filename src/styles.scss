@@ -1,22 +1,46 @@
+html{
+  scroll-behavior: smooth;
+}
+
 body {
     background-color: rgba(20, 29, 47, 1);
     margin: 0;
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
     color: white;
+    overflow-x: hidden;
 }
 
 a {
     color: white;
-    text-decoration: none;
-
-    &:hover{
-        color: rgba(0, 190, 232, 1);
-        animation: ease-in 100ms;
+    text-decoration: none; 
+    cursor: pointer;
+    transition: color 100ms ease-in-out;
+    &:hover {
+      color: rgba(0, 190, 232, 1);
     }
+
 }
 
-/* Fonts */
+.main-btn {
+  color: white;
+  font-size: 23px;
+  background-color: rgba(0, 190, 232, 1);
+  border: none;
+  border-radius: 10px;
+  padding: 15px 30px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 200ms ease-in-out, transform 200ms ease-in-out;
+
+  &:hover {
+    background-color: rgba(75, 71, 255, 1);
+    transform: scale(1.1);
+  }
+}
+
+
+/* Fonts */ 
 /* poppins-100 - latin */
 @font-face {
     font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */

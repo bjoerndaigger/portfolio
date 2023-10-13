@@ -7,15 +7,37 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-left: 100px;
+  padding-right: 100px;
 
   img {
-    height: 35px;
+    height: 38px;
   }
 }
 
 nav {
   font-size: 23px;
+
   a {
     margin-left: 29px;
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+
+    &::after {
+      content: ' ';
+      position: absolute;
+      left: 0;
+      width: 0;
+      height: 3px;
+      background-color: rgba(75, 71, 255, 1);
+      bottom: 0;
+      transition: width 300ms ease-in-out;
+    }
+    &:hover::after {
+      width: 55px;
+    }
   }
 }
+
+
