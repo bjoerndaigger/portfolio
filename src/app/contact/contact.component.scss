@@ -1,0 +1,38 @@
+.container {
+  position: relative;
+}
+.background-shadow {
+  position: absolute;
+  z-index: -1;
+  left: -250px;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 128px;
+}
+
+.container-left {
+  width: 50%;
+  padding-left: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.headline {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.headline-border {
+  border: solid 2px rgb(75, 71, 255);
+  width: 70px;
+}
+
+.container-right {
+  width: 50%;
+  padding-right: 100px;
+}

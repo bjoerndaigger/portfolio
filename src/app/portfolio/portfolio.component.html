@@ -1,10 +1,10 @@
 <div class="container">
         <div class="background-shadow-left">
                 <img src="assets/img/portfolio_shadow_1.png">
-            </div>
-            <div class="background-shadow-right">
+        </div>
+        <div class="background-shadow-right">
                 <img src="assets/img/portfolio_shadow_2.png">
-            </div>
+        </div>
         <div class="headline">
                 <div class="headline-left">
                         <div class="headline-border-left"></div>
@@ -17,7 +17,7 @@
                 </div>
         </div>
         <p class="subheadline">This page is a sample of my work - please feel free to try them out.</p>
-        <div class="projects-container" *ngFor="let project of projects; let i = index"
+        <div class="projects-container margin-top-30" *ngFor="let project of projects; let i = index"
                 [ngStyle]="{ 'flex-direction': i % 2 !== 0 ? 'row-reverse' : 'row' }">
                 <div class="description-container" [ngStyle]="{ 'text-align': i % 2 !== 0 ? 'left' : 'right' }">
                         <div>
@@ -25,7 +25,8 @@
                         </div>
                         <div class="languages"> {{ project.languages }} </div>
                         <div> {{ project.description }}</div>
-                        <div class="btn-container" [ngStyle]="{ 'justify-content': i % 2 !==0 ? 'flex-start' : 'flex-end' }">
+                        <div class="btn-container"
+                                [ngStyle]="{ 'justify-content': i % 2 !==0 ? 'flex-start' : 'flex-end' }">
                                 <a href="{{ project.url }}" target="_blank"><button class="btn-blue">Live
                                                 test</button></a>
                                 <a href="{{ project.github }}" target="_blank"><button
