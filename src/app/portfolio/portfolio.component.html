@@ -1,6 +1,40 @@
 <div class="container">
-        <div class="headline-border-left"></div>
-        <h2>Portfolio</h2>
-        <div class="headline-border-right"></div>
+        <div class="background-shadow-left">
+                <img src="assets/img/portfolio_shadow_1.png">
+            </div>
+            <div class="background-shadow-right">
+                <img src="assets/img/portfolio_shadow_2.png">
+            </div>
+        <div class="headline">
+                <div class="headline-left">
+                        <div class="headline-border-left"></div>
+                </div>
+                <div class="headline-middle">
+                        <h2>Portfolio</h2>
+                </div>
+                <div class="headline-right">
+                        <div class="headline-border-right"></div>
+                </div>
+        </div>
+        <p class="subheadline">This page is a sample of my work - please feel free to try them out.</p>
+        <div class="projects-container" *ngFor="let project of projects; let i = index"
+                [ngStyle]="{ 'flex-direction': i % 2 !== 0 ? 'row-reverse' : 'row' }">
+                <div class="description-container" [ngStyle]="{ 'text-align': i % 2 !== 0 ? 'left' : 'right' }">
+                        <div>
+                                <h3>{{ project.name }}</h3>
+                        </div>
+                        <div class="languages"> {{ project.languages }} </div>
+                        <div> {{ project.description }}</div>
+                        <div class="btn-container" [ngStyle]="{ 'justify-content': i % 2 !==0 ? 'flex-start' : 'flex-end' }">
+                                <a href="{{ project.url }}" target="_blank"><button class="btn-blue">Live
+                                                test</button></a>
+                                <a href="{{ project.github }}" target="_blank"><button
+                                                class="btn-transparent">Github</button></a>
+                        </div>
+                </div>
+                <div class="img-container">
+                        <img src="{{ project.img }}">
+                </div>
+
+        </div>
 </div>
-<router-outlet></router-outlet>

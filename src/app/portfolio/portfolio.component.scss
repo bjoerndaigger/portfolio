@@ -1,16 +1,112 @@
 .container {
+  position: relative;
   padding-top: 100px;
-    display:flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 30px;
 }
-.headline-border-left {
-    border: solid 2px rgb(75, 71, 255);
-    width: 109px;
-  }
 
-  .headline-border-right {
-    border: solid 2px rgb(75, 71, 255);
-    width: 484px;
+.background-shadow-left {
+  position: absolute;
+  z-index: -1;
+  top: 700px;
+  left: -100px;
+}
+
+.background-shadow-right {
+  position: absolute;
+  z-index: -1;
+  bottom: -400px;
+  right: -550px;
+  transform: scaleX(-1);
+}
+
+.headline {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headline-left {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.headline-middle {
+  flex: 1;
+  text-align: center;
+
+  h2 {
+    padding-left: 30px;
+    padding-right: 30px;
   }
+}
+
+.headline-right {
+  flex: 1;
+}
+
+.headline-border-left {
+  border: solid 2px rgb(75, 71, 255);
+  width: 109px;
+  margin-right: 10px;
+}
+
+.headline-border-right {
+  border: solid 2px rgb(75, 71, 255);
+  width: 100%;
+  margin-left: 10px;
+}
+
+.subheadline {
+  text-align: center;
+}
+
+.projects-container {
+  display: flex;
+  align-items: center;
+  margin-left: 100px;
+  margin-right: 100px;
+  & h3 {
+    color: rgba(75, 71, 255, 1);
+  }
+}
+
+.description-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.languages {
+  font-size: 23px;
+  color: rgba(0, 190, 232, 1);
+}
+
+.btn-container {
+  display: flex;
+  gap: 32px;
+  margin-top: 16px;
+
+  & button {
+    color: white;
+    font-size: 23px;
+    border-radius: 10px;
+    padding: 15px 30px;
+    width: 152px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 200ms ease-in-out;
+    &:hover {
+      background-color: rgba(0, 190, 232, 1);
+    }
+  }
+}
+
+.btn-blue {
+  background-color: rgba(75, 71, 255, 1);
+  border: solid 1px transparent;
+}
+
+.btn-transparent {
+  background-color: rgba(20, 29, 47, 1);
+  border: solid 1px rgba(0, 190, 232, 1);
+}
