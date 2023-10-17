@@ -1,12 +1,16 @@
 <div class="container">
     <div class="background-shadow">
-                <img src="assets/img/contact_shadow.png">
-            </div>
+        <img src="assets/img/contact_shadow.png">
+    </div>
+    <div class="scroll-up">
+        <img [src]="isMouseOver ? 'assets/img/scroll_up_active.png' : 'assets/img/scroll_up.png'"
+            (mouseover)="isMouseOver = true" (mouseout)="isMouseOver = false" />
+    </div>
     <div class="headline">
         <div class="headline-border"></div>
         <h2>Contact</h2>
     </div>
-    <div class="contact-container">
+    <div class="contact-container margin-top-30">
         <div class="container-left">
             <h3>Got a problem to solve?</h3>
             <p>Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your
@@ -14,6 +18,19 @@
 
             <p>Need a Frontend developer? <b>Contact me!</b></p>
         </div>
-        <div class="container-right">Form Element</div>
+        <div class="container-right">
+            <form>
+                <div class="input-container">
+                    <input type="text" id="name" name="name" placeholder="Your name" required>
+                    <input type="email" id="email" name="email" placeholder="Your email" required>
+                    <textarea name="message" rows="8" cols="40" placeholder="Your message" required></textarea>
+                </div>
+                <div class="btn-container">
+                    <button class="btn-gray">Send message :)</button>
+                </div>
+            </form>
+        </div>
     </div>
+    <div class="bottom-border"></div>
 </div>
+
