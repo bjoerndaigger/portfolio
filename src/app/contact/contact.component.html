@@ -19,11 +19,14 @@
             <p>Need a Frontend developer? <b>Contact me!</b></p>
         </div>
         <div class="container-right">
-            <form>
+            <form (submit)="sendMail()" #myForm>
                 <div class="input-container">
-                    <input type="text" id="name" name="name" placeholder="Your name" required>
-                    <input type="email" id="email" name="email" placeholder="Your email" required>
-                    <textarea name="message" rows="8" cols="40" placeholder="Your message" required></textarea>
+                    <input type="text" name="name" placeholder="Your name" #nameField required>
+                    <input type="email" name="email" placeholder="Your email" #emailField required>
+                    <textarea name="message" rows="8" cols="40" placeholder="Your message" #messageField required></textarea>
+                    <div class="checkbox-container"><input type="checkbox" name="privacy-policy" required>
+                        <label for="privacy-policy">I've read the privacy policy and agree to the processing of my data as outlined.</label>
+                    </div>
                 </div>
                 <div class="btn-container">
                     <button class="btn-gray">Send message :)</button>
@@ -33,4 +36,3 @@
     </div>
     <div class="bottom-border"></div>
 </div>
-
