@@ -109,8 +109,72 @@
   }
 }
 
+.checkbox-container {
+  font-size: 14px;
+
+  /* hide default checkbox */
+  input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+  }
+
+  /* creating fake checkbox */
+  label::before {
+    content: "";
+    display: inline-block;
+    height: 18px;
+    width: 18px;
+    border: 2px solid rgba(0, 190, 232, 1);
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  /* creating checkmark */
+  label::after {
+    content: "";
+    display: inline-block;
+    height: 6px;
+    width: 9px;
+    border-left: 2px solid;
+    border-bottom: 2px solid;
+    transform: rotate(-45deg);
+    left: 5px;
+    top: 5px;
+    color: rgba(0, 190, 232, 1);
+    cursor: pointer;
+  }
+
+  label {
+    position: relative;
+  }
+
+  label::before,
+  label::after {
+    position: absolute;
+  }
+
+  /* hide the checkmark by default */
+  input[type="checkbox"] + label::after {
+    content: none;
+  }
+
+  /* unhide the checkmark on the checked state */
+  input[type="checkbox"]:checked + label::after {
+    content: "";
+  }
+
+  /* adding hover style on the outer-box of the fake checkbox*/
+  input[type="checkbox"] + label:hover::before {
+    box-shadow: 0 0 4px rgba(0, 190, 232, 1);
+}
+
+  span {
+    margin-left: 32px;
+  }
+}
+
 .bottom-border {
   border: solid 2px rgba(0, 190, 232, 1);
   width: 100%;
-  margin-top: 200px
+  margin-top: 200px;
 }

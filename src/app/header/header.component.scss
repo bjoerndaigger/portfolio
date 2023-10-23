@@ -1,9 +1,11 @@
 header {
-  position: absolute;
+  position: sticky;
+  z-index: 999;
   left: 0;
   top: 0;
   right: 0;
   height: 109px;
+  background-color: rgba(20, 29, 47, 1);
   display: flex;
   justify-content: space-between;
   align-items: center;
