@@ -43,3 +43,33 @@ nav {
 }
 
 
+.overlay-menu {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0, 0.7);
+  z-index: 9999;
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+}
+
+.close-btn {
+  position: absolute;
+  top: 35px;
+  right: 102px;
+}
+
+
+
+

@@ -1,13 +1,24 @@
 <header id="header">
     <a href="#title"> <img src="assets/img/bd_logo_white.png" alt="Logo"></a>
-    <div class="menu">
+    <div>
         <nav>
             <a href="#about">About Me</a>
             <a href="#skills">Skills</a>
             <a href="#portfolio">Portfolio</a>
         </nav>
     </div>
-    <div class="menu-mobile">
+    <div (click)="toggleMobileMenu()">
         <img src="assets/img/burger_menu.png">
     </div>
 </header>
+<div *ngIf="!openMenu" class="overlay-menu">
+    <div class="close-btn" (click)="toggleMobileMenu()">
+        <img src="assets/img/close_icon.png">
+    </div>
+    <nav>
+        <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</div>
