@@ -1,24 +1,24 @@
 <header id="header">
-    <a href="#title"> <img src="assets/img/bd_logo_white.png" alt="Logo"></a>
-    <div>
+    <div class="logo">
+        <a href="#title"> <img src="assets/img/bd_logo_white.png" alt="Logo"></a>
+    </div>
+    <div class="menu">
         <nav>
             <a href="#about">About Me</a>
             <a href="#skills">Skills</a>
             <a href="#portfolio">Portfolio</a>
         </nav>
     </div>
-    <div (click)="toggleMobileMenu()">
-        <img src="assets/img/burger_menu.png">
+    <div class="burger-menu" (click)="toggleMobileMenu()">
+        <img *ngIf="!openMenu" src="assets/img/burger_menu.png">
+        <img *ngIf="openMenu" src="assets/img/close_icon.png">
+    </div>
+    <div *ngIf="openMenu" class="overlay-menu" [class.open]="openMenu">
+        <nav>
+            <a (click)="toggleMobileMenu()" href="#about">About Me</a>
+            <a (click)="toggleMobileMenu()" href="#skills">Skills</a>
+            <a (click)="toggleMobileMenu()" href="#portfolio">Portfolio</a>
+            <a (click)="toggleMobileMenu()" href="#contact">Contact</a>
+        </nav>
     </div>
 </header>
-<div *ngIf="!openMenu" class="overlay-menu">
-    <div class="close-btn" (click)="toggleMobileMenu()">
-        <img src="assets/img/close_icon.png">
-    </div>
-    <nav>
-        <a href="#about">About Me</a>
-        <a href="#skills">Skills</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Contact</a>
-    </nav>
-</div>

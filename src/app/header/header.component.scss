@@ -1,6 +1,6 @@
 header {
   position: sticky;
-  z-index: 999;
+  z-index: 99;
   left: 0;
   top: 0;
   right: 0;
@@ -11,15 +11,19 @@ header {
   align-items: center;
   padding-left: 100px;
   padding-right: 100px;
+}
 
+nav {
+  font-size: 23px;
+}
+
+.logo {
   img {
     height: 38px;
   }
 }
 
-nav {
-  font-size: 23px;
-
+.menu {
   a {
     margin-left: 32px;
     position: relative;
@@ -27,7 +31,7 @@ nav {
     text-decoration: none;
 
     &::after {
-      content: ' ';
+      content: " ";
       position: absolute;
       left: 0;
       width: 0;
@@ -42,20 +46,27 @@ nav {
   }
 }
 
+.burger-menu {
+  position: absolute;
+  right: 100px;
+  z-index: 999;
+  display: none;
+}
 
 .overlay-menu {
-  position: absolute;
-  right: 0;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0,0,0, 0.7);
-  z-index: 9999;
-
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 99;
+  animation: slideInFromRight ease-in-out 200ms;
   nav {
     display: flex;
     flex-direction: column;
@@ -64,12 +75,31 @@ nav {
   }
 }
 
-.close-btn {
-  position: absolute;
-  top: 35px;
-  right: 102px;
+@keyframes slideInFromRight {
+  0% {
+    left: 100%;
+  }
+
+  100% {
+    left: 0%;
+  }
 }
 
+@keyframes slideOutToRight {
+  0% {
+    left: 0%;
+  }
 
+  100% {
+    left: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .burger-menu {
+    display: block;
+  }
 
-
+  .menu {
+    display: none;
+  }
+}
