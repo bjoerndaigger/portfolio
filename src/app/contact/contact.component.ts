@@ -5,7 +5,9 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss'],
 })
+
 export class ContactComponent {
+
   // scroll up animation
   isMouseOver = false;
 
@@ -36,5 +38,10 @@ export class ContactComponent {
     nameField.disabled = false;
     emailField.disabled = false;
     emailField.disabled = false;
+  }
+
+  // scroll to top
+  scrollToTop() {
+    window.scrollTo(0, 0); 
   }
 }

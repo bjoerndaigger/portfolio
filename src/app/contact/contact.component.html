@@ -3,9 +3,11 @@
         <img src="assets/img/contact_shadow.png">
     </div>
     <div class="scroll-up">
-        <a href="#title">
-        <img [src]="isMouseOver ? 'assets/img/scroll_up_active.png' : 'assets/img/scroll_up.png'"
-            (mouseover)="isMouseOver = true" (mouseout)="isMouseOver = false"></a>
+        <a href="#" (click)="scrollToTop()">
+            <img [src]="isMouseOver ? 'assets/img/scroll_up_active.png' : 'assets/img/scroll_up.png'"
+            (mouseover)="isMouseOver = true"
+            (mouseout)="isMouseOver = false">
+        </a>
     </div>
     <div class="headline">
         <div class="headline-border"></div>
@@ -30,7 +32,7 @@
                         <input type="checkbox" id="privace-policy-checkbox" name="privacy-policy" required>
                         <label for="privace-policy-checkbox"><span>I've read the privacy policy and agree to the
                                 processing of my data as outlined.</span></label>
-                    </div> 
+                    </div>
                 </div>
                 <div class="btn-container">
                     <button class="btn-gray">Send message :)</button>

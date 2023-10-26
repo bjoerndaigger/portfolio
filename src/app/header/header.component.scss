@@ -51,6 +51,7 @@ nav {
   right: 100px;
   z-index: 999;
   display: none;
+  cursor: pointer;
 }
 
 .overlay-menu {
@@ -66,7 +67,7 @@ nav {
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.7);
   z-index: 99;
-  animation: slideInFromRight ease-in-out 200ms;
+
   nav {
     display: flex;
     flex-direction: column;
@@ -75,25 +76,9 @@ nav {
   }
 }
 
-@keyframes slideInFromRight {
-  0% {
-    left: 100%;
-  }
 
-  100% {
-    left: 0%;
-  }
-}
 
-@keyframes slideOutToRight {
-  0% {
-    left: 0%;
-  }
 
-  100% {
-    left: 100%;
-  }
-}
 @media (max-width: 768px) {
   .burger-menu {
     display: block;

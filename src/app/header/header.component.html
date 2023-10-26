@@ -13,7 +13,7 @@
         <img *ngIf="!openMenu" src="assets/img/burger_menu.png">
         <img *ngIf="openMenu" src="assets/img/close_icon.png">
     </div>
-    <div *ngIf="openMenu" class="overlay-menu" [class.open]="openMenu">
+    <div *ngIf="openMenu" class="overlay-menu" [@slideAnimation]>
         <nav>
             <a (click)="toggleMobileMenu()" href="#about">About Me</a>
             <a (click)="toggleMobileMenu()" href="#skills">Skills</a>
