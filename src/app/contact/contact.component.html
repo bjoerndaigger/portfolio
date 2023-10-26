@@ -4,9 +4,7 @@
     </div>
     <div class="scroll-up">
         <a href="#" (click)="scrollToTop()">
-            <img [src]="isMouseOver ? 'assets/img/scroll_up_active.png' : 'assets/img/scroll_up.png'"
-            (mouseover)="isMouseOver = true"
-            (mouseout)="isMouseOver = false">
+            <img (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()" src="{{ scrollUpBtn }}">
         </a>
     </div>
     <div class="headline">

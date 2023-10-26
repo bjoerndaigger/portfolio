@@ -5,11 +5,16 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss'],
 })
-
 export class ContactComponent {
+  scrollUpBtn = 'assets/img/scroll_up.png';
 
-  // scroll up animation
-  isMouseOver = false;
+  onMouseEnter() {
+    this.scrollUpBtn = 'assets/img/scroll_up_active.png';
+  }
+
+  onMouseLeave() {
+    this.scrollUpBtn = 'assets/img/scroll_up.png';
+  }
 
   // send mail
   @ViewChild('myForm') myForm!: ElementRef;
@@ -42,6 +47,6 @@ export class ContactComponent {
 
   // scroll to top
   scrollToTop() {
-    window.scrollTo(0, 0); 
+    window.scrollTo(0, 0);
   }
 }
