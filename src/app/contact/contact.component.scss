@@ -50,7 +50,6 @@
 .input-container {
   display: flex;
   flex-direction: column;
-  gap: 32px;
 
   input,
   textarea {
@@ -173,6 +172,11 @@
   }
 }
 
+.alert {
+  color: red;
+  margin-top: 4px;
+  font-size: 12px;
+}
 
 .bottom-border {
   border: solid 2px rgba(0, 190, 232, 1);

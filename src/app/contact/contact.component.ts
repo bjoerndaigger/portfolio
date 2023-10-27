@@ -16,12 +16,18 @@ export class ContactComponent {
     this.scrollUpBtn = 'assets/img/scroll_up.png';
   }
 
+  formData = {
+    name: '',
+    email: '',
+    message: '',
+    privacyPolicyAccepted: false
+  };
   // send mail
   @ViewChild('myForm') myForm!: ElementRef;
   @ViewChild('nameField') nameField!: ElementRef;
   @ViewChild('emailField') emailField!: ElementRef;
   @ViewChild('messageField') messageField!: ElementRef;
-  async sendMail() {
+  async submit() {
     let nameField = this.nameField.nativeElement;
     let emailField = this.emailField.nativeElement;
     let messageField = this.messageField.nativeElement;

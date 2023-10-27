@@ -20,20 +20,55 @@
             <p>Need a Frontend developer? <b>Contact me!</b></p>
         </div>
         <div class="container-right">
-            <form ngNativeValidate (submit)="sendMail()" #myForm>
+            <form (ngSubmit)="submit()" #myForm>
                 <div class="input-container">
-                    <input type="text" name="name" placeholder="Your name" #nameField required>
-                    <input type="email" name="email" placeholder="Your email" #emailField required>
-                    <textarea name="message" rows="8" cols="40" placeholder="Your message" #messageField
-                        required></textarea>
-                    <div class="checkbox-container">
-                        <input type="checkbox" id="privace-policy-checkbox" name="privacy-policy" required>
-                        <label for="privace-policy-checkbox"><span>I've read the privacy policy and agree to the
-                                processing of my data as outlined.</span></label>
+                    <!-- form data name -->
+                    <input type="text" #nameField name="name" placeholder="Your name" required
+                        [(ngModel)]="formData.name" #name="ngModel">
+                    <!-- error message -->
+                    <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert">
+                        <div *ngIf="name.errors?.['required']">
+                            Your name is required.
+                        </div>
                     </div>
+                    <!-- form data email -->
+                    <input type="email" #emailField name="email" placeholder="Your email" required
+                        [(ngModel)]="formData.email" #email="ngModel">
+                    <!-- error message-->
+                    <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert">
+                        <div *ngIf="email.errors?.['required']">
+                            Your email is required.
+                        </div>
+                    </div>
+                    <!-- form data message-->
+                    <textarea name="message" #messageField placeholder="Your message" required rows="8" cols="40"
+                        minlength="5" [(ngModel)]="formData.message" #message="ngModel"></textarea>
+                    <!-- error message -->
+                    <div *ngIf="message.invalid && (message.dirty || message.touched)" class="alert">
+                        <div *ngIf="message.errors?.['required']">
+                            Your message is empty.
+                        </div>
+                        <div *ngIf="message.errors?.['minlength']">
+                            Message must be at least 5 characters long.
+                        </div>
+                    </div>
+                    <!-- form data checkbox -->
+                    <div class="checkbox-container">
+                        <input type="checkbox" id="privacy-policy-checkbox" name="privacy-policy" required
+                               [(ngModel)]="formData.privacyPolicyAccepted" #privacyPolicy="ngModel">
+                        <label for="privacy-policy-checkbox">
+                            <span>I've read the <a routerLink="/privacy-policy">privacy policy</a> and agree to the processing of my data as outlined.</span>
+                        </label>
+                    </div>
+                    <div *ngIf="privacyPolicy.invalid && (privacyPolicy.dirty || privacyPolicy.touched)" class="alert">
+                        <div *ngIf="privacyPolicy.errors?.required">
+                            You must accept the privacy policy to proceed.
+                        </div>
+                    </div>
+                    
                 </div>
                 <div class="btn-container">
-                    <button class="btn-gray">Send message :)</button>
+                    <button class="btn-gray" >Send message :)</button>
                 </div>
             </form>
         </div>
