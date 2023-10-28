@@ -20,57 +20,98 @@
             <p>Need a Frontend developer? <b>Contact me!</b></p>
         </div>
         <div class="container-right">
-            <form (ngSubmit)="submit()" #myForm>
+            <form *ngIf="!isSentSuccessfully" (ngSubmit)="submit()" #myForm="ngForm">
+                <!-- form data name -->
                 <div class="input-container">
-                    <!-- form data name -->
-                    <input type="text" #nameField name="name" placeholder="Your name" required
-                        [(ngModel)]="formData.name" #name="ngModel">
+                    <input
+                        [ngClass]="{'border-green': name.valid,'border-red': name.invalid && (name.dirty || name.touched)}"
+                        type="text" #nameField name="name" placeholder="Your name" required [(ngModel)]="formData.name"
+                        #name="ngModel">
+                    <!-- success image -->
+                    <div *ngIf="name.valid" class="form-success-img">
+                        <img src="assets/img/form_success.png">
+                    </div>
+                    <!-- error image -->
+                    <div *ngIf="name.invalid && (name.dirty || name.touched)" class="form-alert-img">
+                        <img src="assets/img/form_alert.png">
+                    </div>
                     <!-- error message -->
                     <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert">
                         <div *ngIf="name.errors?.['required']">
                             Your name is required.
                         </div>
                     </div>
-                    <!-- form data email -->
-                    <input type="email" #emailField name="email" placeholder="Your email" required
-                        [(ngModel)]="formData.email" #email="ngModel">
+                </div>
+                <!-- form data email -->
+                <div class="input-container margin-top-30">
+                    <input [ngClass]="{'border-green': email.valid,'border-red': email.invalid && (email.dirty || email.touched)}" type="email" #emailField name="email" placeholder="Your email" required
+                    pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}" [(ngModel)]="formData.email" #email="ngModel">
+                         <!-- success image -->
+                    <div *ngIf="email.valid" class="form-success-img">
+                        <img src="assets/img/form_success.png">
+                    </div>
+                    <!-- error image -->
+                    <div *ngIf="email.invalid && (email.dirty || email.touched)" class="form-alert-img">
+                        <img src="assets/img/form_alert.png">
+                    </div>
                     <!-- error message-->
                     <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert">
                         <div *ngIf="email.errors?.['required']">
                             Your email is required.
                         </div>
                     </div>
-                    <!-- form data message-->
-                    <textarea name="message" #messageField placeholder="Your message" required rows="8" cols="40"
-                        minlength="5" [(ngModel)]="formData.message" #message="ngModel"></textarea>
+                </div>
+                <!-- form data message-->
+                <div class="input-container margin-top-30">
+                    <textarea [ngClass]="{'border-green': message.valid,'border-red': message.invalid && (message.dirty || message.touched)}" name="message" #messageField placeholder="Your message" required rows="8" cols="40"
+                        minlength="10" [(ngModel)]="formData.message" #message="ngModel"></textarea>
+                         <!-- success image -->
+                    <div *ngIf="message.valid" class="form-success-img">
+                        <img src="assets/img/form_success.png">
+                    </div>
+                    <!-- error image -->
+                    <div *ngIf="message.invalid && (message.dirty || message.touched)" class="form-alert-img">
+                        <img src="assets/img/form_alert.png">
+                    </div>
                     <!-- error message -->
                     <div *ngIf="message.invalid && (message.dirty || message.touched)" class="alert">
                         <div *ngIf="message.errors?.['required']">
                             Your message is empty.
                         </div>
                         <div *ngIf="message.errors?.['minlength']">
-                            Message must be at least 5 characters long.
+                            Message must be at least 10 characters long.
                         </div>
                     </div>
-                    <!-- form data checkbox -->
+                </div>
+                <!-- form data checkbox -->
+                <div class="input-container">
                     <div class="checkbox-container">
                         <input type="checkbox" id="privacy-policy-checkbox" name="privacy-policy" required
-                               [(ngModel)]="formData.privacyPolicyAccepted" #privacyPolicy="ngModel">
+                            [(ngModel)]="formData.checkbox" #checkbox="ngModel">
                         <label for="privacy-policy-checkbox">
-                            <span>I've read the <a routerLink="/privacy-policy">privacy policy</a> and agree to the processing of my data as outlined.</span>
+                            <span>I've read the <a routerLink="/privacy-policy" target="_blank">privacy policy</a> and
+                                agree to the
+                                processing of my data as outlined.</span>
                         </label>
                     </div>
-                    <div *ngIf="privacyPolicy.invalid && (privacyPolicy.dirty || privacyPolicy.touched)" class="alert">
-                        <div *ngIf="privacyPolicy.errors?.required">
+                    <!-- error message -->
+                    <div *ngIf="checkbox.invalid && (checkbox.dirty || checkbox.touched)" class="alert">
+                        <div *ngIf="checkbox.errors?.required">
                             You must accept the privacy policy to proceed.
                         </div>
                     </div>
-                    
                 </div>
+                <!-- sbbmit button -->
                 <div class="btn-container">
-                    <button class="btn-gray" >Send message :)</button>
+                    <button class="btn-gray" [disabled]="!myForm.valid"
+                        [ngClass]="{'btn-gray-active': myForm.valid}">Send message :)</button>
                 </div>
             </form>
+            <div *ngIf="isSentSuccessfully" class="success-msg">
+                <img src="assets/img/form_success.png">
+                <h3>Thank you</h3>
+                <p>Thank your for contacting me.</p>
+            </div>
         </div>
     </div>
     <div class="bottom-border"></div>
