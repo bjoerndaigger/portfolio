@@ -20,7 +20,7 @@
             <p>Need a Frontend developer? <b>Contact me!</b></p>
         </div>
         <div class="container-right">
-            <form *ngIf="!isSentSuccessfully" (ngSubmit)="submit()" #myForm="ngForm">
+            <form *ngIf="!isSentSuccessfully" (ngSubmit)="submit()" #myForm="ngForm" [@fadeInOut]>
                 <!-- form data name -->
                 <div class="input-container">
                     <input
@@ -107,7 +107,7 @@
                         [ngClass]="{'btn-gray-active': myForm.valid}">Send message :)</button>
                 </div>
             </form>
-            <div *ngIf="isSentSuccessfully" class="success-msg">
+            <div *ngIf="isSentSuccessfully" class="success-msg" [@fadeInOut]>
                 <img src="assets/img/form_success.png">
                 <h3>Thank you</h3>
                 <p>Thank your for contacting me.</p>

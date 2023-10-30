@@ -213,12 +213,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  z-index: 999;
 
   img {
     margin-bottom: 16px;
   }
 }
-
 
 .bottom-border {
   border: solid 2px rgba(0, 190, 232, 1);

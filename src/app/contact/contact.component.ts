@@ -1,10 +1,22 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { animate, style, transition, trigger, state } from '@angular/animations';
 import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss'],
+  animations: [
+    trigger('fadeInOut', [
+      state('void', style({ opacity: 0 })),
+      transition(':enter', [
+        animate(500, style({ opacity: 1 })),
+      ]),
+      transition(':leave', [
+        animate(500, style({ opacity: 0 })),
+      ]),
+    ]),
+  ],
 })
 export class ContactComponent {
   isSentSuccessfully: boolean = false;
@@ -53,7 +65,12 @@ export class ContactComponent {
 
   showSuccessMessage() {
     this.isSentSuccessfully = true;
+  
+    setTimeout(() => {
+      this.isSentSuccessfully = false;
+    }, 4000); 
   }
+  
   
   // scroll to top
   scrollToTop() {
