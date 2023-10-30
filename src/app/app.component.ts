@@ -13,6 +13,7 @@ export class AppComponent implements OnInit {
     AOS.init({
       duration: 1000,
       delay: 150,
+      disableOn: '(max-width: 768px)',
     });
   }
 

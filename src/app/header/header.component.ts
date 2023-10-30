@@ -23,4 +23,8 @@ export class HeaderComponent {
   toggleMobileMenu(): void {
     this.openMenu = !this.openMenu;
   }
+
+  scrollToTop() {
+    window.scrollTo(0, 0);
+  }
 }

@@ -64,6 +64,24 @@ a {
   }
 }
 
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(241, 241, 241, 1); 
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 190, 232, 1); 
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(75, 71, 255, 1); 
+}
+
 /* Fonts */
 /* poppins-100 - latin */
 @font-face {
