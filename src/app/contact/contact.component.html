@@ -12,14 +12,14 @@
         <h2>Contact</h2>
     </div>
     <div class="contact-container margin-top-30">
-        <div class="container-left">
+        <div data-aos="fade-right" class="container-left">
             <h3>Got a problem to solve?</h3>
             <p>Contact me through this form, I am interested in hearing you, knowing your ideas and contributing to your
                 projects with my work.</p>
 
             <p>Need a Frontend developer? <b>Contact me!</b></p>
         </div>
-        <div class="container-right">
+        <div data-aos="fade-left"class="container-right">
             <form *ngIf="!isSentSuccessfully" (ngSubmit)="submit()" #myForm="ngForm" [@fadeInOut]>
                 <!-- form data name -->
                 <div class="input-container">
