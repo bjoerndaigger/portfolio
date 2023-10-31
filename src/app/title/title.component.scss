@@ -8,9 +8,12 @@
 }
 
 .background-shape {
+  display: flex;
   position: absolute;
-  top: 200px;
+  top: 379px;
   width: 100vw;
+  height: 1000px;
+  overflow: hidden;
   img {
     width: 100%;
   }
@@ -47,10 +50,10 @@
 
 .headline-left {
   rotate: 270deg;
-  font-size: 64px;
+  font-size: 67px;
   display: flex;
   align-items: center;
-  margin-top: 8px;
+  margin-top: 12px;
   margin-right: -16px;
 }
 
@@ -109,24 +112,23 @@
   gap: 8px;
 }
 
-@media (max-width: 1600px) {
-  .headline-left {
-    rotate: 270deg;
-    font-size: 64px;
-    display: flex;
-    align-items: center;
-    margin-top: 8px;
-    margin-right: -16px;
+@media only screen and (max-width: 1600px) {
+  .headline {
+    h1 {
+      margin-bottom: 4px;
+    }
   }
-
-  .headline-name {
-    font-size: 88px;
-    font-weight: 700;
+  .headline-left {
+    font-size: 49px;
+    margin-top: 10px;
   }
 
   .headline-job {
-    font-size: 58px;
-    color: rgba(75, 71, 255, 1);
-    margin-top: -24px;
+    font-size: 44px;
   }
 }
+
+
+
+
+

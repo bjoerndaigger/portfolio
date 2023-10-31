@@ -3,22 +3,27 @@
   display: flex;
   padding-top: 100px;
   padding-left: 100px;
-  gap: 64px;
 }
 
 .background-shadow {
   position: absolute;
   top: 200px;
   left: -350px;
-  
+}
+
+.content-container {
+  display: flex;
 }
 
 .container-left {
+  width: 70%;
+}
+
+.skill-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 54px 123px;
   position: relative;
-    z-index: 1;
+  z-index: 1;
 }
 
 .icon-container {
@@ -27,12 +32,18 @@
   align-items: center;
   width: 88px;
   height: 100px;
+  margin-right: 64px;
+  margin-bottom: 64px;
   gap: 10px;
   text-align: center;
 }
 
 @keyframes bounce {
-  0%, 100%, 20%, 50%, 80% {
+  0%,
+  100%,
+  20%,
+  50%,
+  80% {
     transform: translateY(0);
   }
   40% {
@@ -51,6 +62,9 @@
   }
 }
 
+.contact-btn-mobile {
+  display: none;
+}
 .headline {
   display: flex;
   justify-content: flex-end;
@@ -71,5 +85,40 @@
   align-items: center;
   p {
     text-align: right;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .content-container {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .container-left {
+    width: 100%;
+    margin-top: 96px;
+    padding-right: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skill-container {
+    justify-content:center;
+    gap: 64px;
+  }
+
+  .icon-container {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+
+  .contact-btn {
+    display: none;
+  }
+
+  .contact-btn-mobile {
+    display: block;
+    margin-top: 96px;
   }
 }

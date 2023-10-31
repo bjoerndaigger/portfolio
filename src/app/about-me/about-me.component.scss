@@ -14,11 +14,12 @@
 }
 
 .container-left {
-  margin-right: 50px;
+  margin-right: 128px;
 }
 
-.bulb-container, .puzzle-container {
-  display:flex;
+.bulb-container,
+.puzzle-container {
+  display: flex;
 }
 
 .icon-container {
@@ -27,7 +28,7 @@
   img {
     width: 50px;
     height: 50px;
-    object-fit:contain;
+    object-fit: contain;
   }
 }
 
@@ -47,4 +48,36 @@
   background-color: rgba(0, 190, 232, 1);
   width: 240px;
   height: 4px;
+}
+
+@media only screen and (max-width: 1600px) {
+  .container-right {
+    img {
+      max-width: 353px;
+      max-height: 353px;
+    }
+  }
+  .about-me-border {
+    width: 180px;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .about-me-border {
+    width: 140px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .container {
+    padding-right: 100px;
+  }
+  
+  .container-left {
+    margin-right: 0;
+  }
+
+  .container-right {
+    display: none;
+  }
 }
