@@ -1,16 +1,11 @@
 .container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-right: 100px;
   scroll-behavior: smooth;
 }
 
 .background-shape {
   display: flex;
   position: absolute;
-  top: 379px;
+  top: 400px;
   width: 100vw;
   height: 1000px;
   overflow: hidden;
@@ -18,7 +13,6 @@
     width: 100%;
   }
 }
-
 .photo-shadow {
   position: absolute;
   z-index: -1;
@@ -26,11 +20,17 @@
   left: -30px;
 }
 
+.content-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .container-left {
   padding-left: 100px;
   z-index: -1;
   img {
-    max-height: 646px;
     max-height: 705px;
   }
 }
@@ -128,7 +128,29 @@
   }
 }
 
+@media only screen and (max-width: 992px) {
 
+  .background-shape {
+    top: 200px;
+  }
+  .content-container {
+    flex-direction: column;
+  }
 
+  .container-left {
+    padding-left: 0;
+    img {
+      max-height: 448px;
+    }
+  }
+  .container-right {
+    position: relative;
+    right: 0;
+    margin-bottom: 30px;
+  }
 
-
+  .scroll-down,
+  .email {
+    display: none;
+  }
+}
