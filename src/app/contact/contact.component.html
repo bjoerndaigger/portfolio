@@ -25,7 +25,7 @@
                 <div class="input-container">
                     <input
                         [ngClass]="{'border-green': name.valid,'border-red': name.invalid && (name.dirty || name.touched)}"
-                        type="text" #nameField name="name" placeholder="Your name" required [(ngModel)]="formData.name"
+                        pattern=".*" type="text" #nameField name="name" placeholder="Your name" required [(ngModel)]="formData.name"
                         #name="ngModel">
                     <!-- success image -->
                     <div *ngIf="name.valid" class="form-success-img">

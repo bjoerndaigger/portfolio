@@ -12,9 +12,9 @@ import { NgForm } from '@angular/forms';
       transition(':enter', [
         animate(500, style({ opacity: 1 })),
       ]),
-      transition(':leave', [
+      /* transition(':leave', [
         animate(500, style({ opacity: 0 })),
-      ]),
+      ]), */
     ]),
   ],
 })

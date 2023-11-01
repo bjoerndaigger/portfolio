@@ -69,9 +69,17 @@ a {
   h2 {
     font-size: 67px;
   }
+}
 
-  .main-bottom {
-    
+@media only screen and (max-width: 992px) {
+  h1,
+  h2 {
+    font-size: 45px;
+  }
+
+  .main-btn {
+    font-size: 16px;
+    line-height: 19.2px;
   }
 }
 

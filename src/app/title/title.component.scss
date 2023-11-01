@@ -2,7 +2,8 @@
   scroll-behavior: smooth;
 }
 
-.background-shape {
+.background-shape,
+.background-shape-mobile {
   display: flex;
   position: absolute;
   top: 400px;
@@ -13,6 +14,11 @@
     width: 100%;
   }
 }
+
+.background-shape-mobile {
+  display: none;
+}
+
 .photo-shadow {
   position: absolute;
   z-index: -1;
@@ -70,6 +76,7 @@
 
 .contact-btn {
   margin-top: 32px;
+  z-index: 1;
 }
 
 .contact-links {
@@ -129,10 +136,14 @@
 }
 
 @media only screen and (max-width: 992px) {
-
   .background-shape {
-    top: 200px;
+    display: none;
   }
+
+  .background-shape-mobile {
+    display: block;
+  }
+
   .content-container {
     flex-direction: column;
   }
@@ -149,8 +160,28 @@
     margin-bottom: 30px;
   }
 
+  .headline {
+    h1 {
+      margin-bottom: 16px;
+    }
+  }
+  .headline-left {
+    font-size: 34px;
+    margin-top: 1px;
+  }
+
+  .headline-job {
+    font-size: 29px;
+  }
+
   .scroll-down,
   .email {
     display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .background-shape-mobile {
+    top: 440px;
   }
 }
