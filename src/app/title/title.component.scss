@@ -24,6 +24,7 @@
   z-index: -1;
   top: 80px;
   left: -30px;
+  opacity: 0.8;
 }
 
 .content-container {
@@ -142,6 +143,14 @@
 
   .background-shape-mobile {
     display: block;
+  }
+
+  .photo-shadow {
+    left: 50%;
+    transform: translateX(-50%);
+    img {
+      height: 600px;
+    }
   }
 
   .content-container {

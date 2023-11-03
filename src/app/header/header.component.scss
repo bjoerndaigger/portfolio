@@ -48,7 +48,7 @@ nav {
 
 .burger-menu {
   position: absolute;
-  right: 100px;
+  right: 25px;
   z-index: 999;
   display: none;
   cursor: pointer;
@@ -78,8 +78,18 @@ nav {
 }
 
 @media (max-width: 768px) {
+  header {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
   .burger-menu {
     display: block;
+  }
+
+  .logo {
+    img {
+      margin-left: -8px;
+    }
   }
 
   .menu {

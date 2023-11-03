@@ -19,9 +19,6 @@
 
 .container-left {
   width: 70%;
-}
-
-.skill-container {
   display: flex;
   flex-wrap: wrap;
   position: relative;
@@ -67,6 +64,7 @@
 .contact-btn-mobile {
   display: none;
 }
+
 .headline {
   display: flex;
   justify-content: flex-end;
@@ -91,22 +89,23 @@
 }
 
 @media only screen and (max-width: 992px) {
+  .background-shadow {
+    top: auto;
+    bottom: 0;
+  }
+
   .content-container {
     display: flex;
     flex-direction: column-reverse;
   }
 
   .container-left {
-    width: 100%;
+    width: auto;
     margin-top: 96px;
     padding-right: 100px;
     display: flex;
-    flex-direction: column;
     align-items: center;
-  }
-
-  .skill-container {
-    justify-content:center;
+    justify-content: center;
     gap: 64px;
   }
 
@@ -120,7 +119,37 @@
   }
 
   .contact-btn-mobile {
-    display: block;
-    margin-top: 96px;
+    display: flex;
+    justify-content: center;
+    margin-top: 64px;
+    padding-right: 100px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    padding-left: 0;
+  }
+
+  .container-left {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  
+  .contact-btn-mobile {
+    padding-right: 0;
+  }
+
+  .headline {
+    gap: 8px;
+  }
+  
+  .headline-border {
+    width: 17px;
+  }
+
+  .skill-info {
+    padding-left: 25px;
+    padding-right: 25px;
   }
 }
