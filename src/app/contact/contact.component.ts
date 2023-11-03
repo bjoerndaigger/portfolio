@@ -68,7 +68,7 @@ export class ContactComponent {
   
     setTimeout(() => {
       this.isSentSuccessfully = false;
-    }, 4000); 
+    }, 3000); 
   }
   
   

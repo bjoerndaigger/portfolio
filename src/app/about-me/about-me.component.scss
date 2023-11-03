@@ -2,16 +2,15 @@
   position: relative;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   padding-top: 100px;
   padding-left: 100px;
 }
 
 .background-shadow {
   position: absolute;
-  top: -200px;
+  top: -300px;
   right: -400px;
-  opacity: 0.5;
 }
 
 .container-left {
@@ -37,6 +36,7 @@
   display: flex;
   align-items: center;
   z-index: 1;
+  margin-top: 24px;
   img {
     border-radius: 100%;
     max-width: 453px;
@@ -64,6 +64,15 @@
 }
 
 @media only screen and (max-width: 1400px) {
+  .container-left {
+    margin-right: 96px;
+  }
+  .container-right {
+    img {
+      max-width: 303px;
+      max-height: 303px;
+    }
+  }
   .about-me-border {
     width: 140px;
   }

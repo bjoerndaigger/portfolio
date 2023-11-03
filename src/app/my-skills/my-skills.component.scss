@@ -9,7 +9,6 @@
   position: absolute;
   top: 200px;
   left: -350px;
-  opacity: 0.5;
   z-index: -1;
 }
 
@@ -18,7 +17,7 @@
 }
 
 .container-left {
-  width: 70%;
+  width: 90%;
   display: flex;
   flex-wrap: wrap;
   position: relative;
@@ -70,6 +69,7 @@
   justify-content: flex-end;
   align-items: center;
   gap: 32px;
+  white-space: nowrap;
 }
 
 .headline-border {
@@ -92,6 +92,7 @@
   .background-shadow {
     top: auto;
     bottom: 0;
+    left: -400px;
   }
 
   .content-container {
@@ -135,7 +136,7 @@
     padding-left: 25px;
     padding-right: 25px;
   }
-  
+
   .contact-btn-mobile {
     padding-right: 0;
   }
@@ -143,7 +144,7 @@
   .headline {
     gap: 8px;
   }
-  
+
   .headline-border {
     width: 17px;
   }
@@ -152,4 +153,7 @@
     padding-left: 25px;
     padding-right: 25px;
   }
+}
+
+@media only screen and (max-width: 600px) {
 }

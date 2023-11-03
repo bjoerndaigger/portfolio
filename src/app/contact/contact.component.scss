@@ -7,9 +7,9 @@
 .background-shadow {
   position: absolute;
   z-index: -1;
-  top: 250px;
+  top: 300px;
   left: -250px;
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 .scroll-up {
@@ -74,8 +74,8 @@
       border: solid 1px rgba(112, 230, 28, 1);
     }
 
-    &::placeholder {
-      color: white;
+    &:hover {
+      border: solid 1px rgba(28, 230, 182, 1);
     }
 
     &::-webkit-contacts-auto-fill-button {
@@ -229,6 +229,11 @@
 }
 
 @media only screen and (max-width: 992px) {
+  .background-shadow {
+    top: 600px;
+    left: -350px;
+  }
+
   .contact-container {
     flex-direction: column;
     align-items: center;
@@ -250,7 +255,7 @@
   .headline {
     gap: 8px;
   }
-  
+
   .headline-border {
     width: 17px;
   }
