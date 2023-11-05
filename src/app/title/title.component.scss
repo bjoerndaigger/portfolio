@@ -3,8 +3,7 @@
   margin-top: 109px;
 }
 
-.background-shape,
-.background-shape-mobile {
+.background-shape {
   display: flex;
   position: absolute;
   top: 400px;
@@ -18,6 +17,14 @@
 
 .background-shape-mobile {
   display: none;
+  position: absolute;
+  top: 666px;
+  width: 100vw;
+  height: 1000px;
+
+  img {
+    width: 100%;
+  }
 }
 
 .photo-shadow {
@@ -120,7 +127,7 @@
   gap: 8px;
 }
 
-@media only screen and (max-width: 1600px) {
+@media only screen and (max-width: 1440px) {
   .headline {
     h1 {
       margin-bottom: 4px;
@@ -136,6 +143,28 @@
   }
 }
 
+@media only screen and (max-width: 1200px) {
+  .photo-shadow {
+    left: -82px;
+  }
+
+  .container-left {
+    padding-left: 50px;
+  }
+  .headline {
+    h1 {
+      margin-bottom: 12px;
+    }
+  }
+  .headline-left {
+    font-size: 38px;
+    margin-bottom: -6px;
+  }
+
+  .headline-job {
+    font-size: 33px;
+  }
+}
 @media only screen and (max-width: 992px) {
   .background-shape {
     display: none;
@@ -148,9 +177,6 @@
   .photo-shadow {
     left: 50%;
     transform: translateX(-50%);
-    img {
-      height: 600px;
-    }
   }
 
   .content-container {
@@ -159,30 +185,20 @@
 
   .container-left {
     padding-left: 0;
-    img {
-      max-height: 448px;
-    }
   }
+
   .container-right {
     position: relative;
     left: -8px;
     right: 8px;
-    margin-bottom: 30px;
+    margin-top: 16px;
+    margin-bottom: 112px;
   }
 
   .headline {
     h1 {
       margin-bottom: 16px;
     }
-  }
-
-  .headline-left {
-    font-size: 40px;
-    margin-bottom: -6px;
-  }
-
-  .headline-job {
-    font-size: 33px;
   }
 
   .contact-btn {
@@ -196,8 +212,26 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .container-right {
+    margin-bottom: 96px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
   .background-shape-mobile {
-    top: 440px;
+    top: 466px;
+  }
+
+  .photo-shadow {
+    img {
+      height: 600px;
+    }
+  }
+
+  .container-left {
+    img {
+      max-height: 448px;
+    }
   }
 
   .headline-left {
@@ -207,6 +241,10 @@
 
   .headline-job {
     font-size: 29px;
+  }
+
+  .container-right {
+    margin-bottom: 80px;
   }
 }
 
@@ -220,6 +258,10 @@
     font-size: 25px;
     margin-bottom: -2px;
     margin-right: -12px;
+  }
+
+  .container-right {
+    margin-bottom: 48px;
   }
 }
 
