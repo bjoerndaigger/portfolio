@@ -3,20 +3,11 @@ app-header {
     top: 0;
     right: 0;
     left: 0;
-    background-color: rgba(20, 29, 47, 1);;
-    padding: 0 100px;
-    height: 109px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background-color: rgba(20, 29, 47, 1);
     z-index: 999;
   }
 
   app-footer {
-    height: 291px;
-    background-color: rgba(20, 29, 47, 1);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 100px;
+      background-color: rgba(20, 29, 47, 1);
   }
+

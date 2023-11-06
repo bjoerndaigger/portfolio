@@ -1,9 +1,4 @@
 header {
-  position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  background-color: rgba(20, 29, 47, 1);
   max-width: 1920px;
   margin: 0 auto;
 }
@@ -12,9 +7,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 100px;
-  padding-right: 100px;
   height: 109px;
+  padding: 0 100px;
 }
 
 nav {
@@ -86,6 +80,11 @@ nav {
     padding-left: 25px;
     padding-right: 25px;
   }
+
+  .container {
+    padding: 0;
+  }
+
   .burger-menu {
     display: block;
   }
