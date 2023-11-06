@@ -1,11 +1,7 @@
 footer {
-  height: 291px;
   background-color: rgba(20, 29, 47, 1);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 100px;
-  padding-right: 100px;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 .container-left {
@@ -66,8 +62,8 @@ footer {
 }
 
 @media only screen and (max-width: 768px) {
-footer {
-  padding-left: 25px;
-  padding-right: 25px;
-}
+  footer {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
 }

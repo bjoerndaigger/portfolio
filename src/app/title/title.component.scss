@@ -1,6 +1,9 @@
 .container {
+  position: relative;
   scroll-behavior: smooth;
-  margin-top: 109px;
+  padding-top: 109px;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 .background-shape {
@@ -56,6 +59,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 1;
 }
 
 .headline {
@@ -108,7 +112,8 @@
 
 .contact-border {
   border: solid 2px rgba(75, 71, 255, 1);
-  width: 100px;
+  width: 1000px;
+  margin-left: -920px;
 }
 
 .email {

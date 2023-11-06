@@ -1,22 +1,22 @@
 .container {
   position: relative;
-  overflow: hidden;
   padding-top: 128px;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 
 .background-shadow {
   position: absolute;
   z-index: -1;
-  top: 300px;
+  bottom: 0;
   left: -250px;
   opacity: 0.7;
 }
 
 .scroll-up {
   position: absolute;
-  z-index: 1;
   cursor: pointer;
-  bottom: 100px;
+  bottom: -100px;
   right: 100px;
 }
 
@@ -43,7 +43,8 @@
 
 .headline-border {
   border: solid 2px rgb(75, 71, 255);
-  width: 70px;
+  width: 1000px;
+    margin-left: -920px;
 }
 
 .container-right {
@@ -230,7 +231,6 @@
 
 @media only screen and (max-width: 992px) {
   .background-shadow {
-    top: 600px;
     left: -350px;
   }
 

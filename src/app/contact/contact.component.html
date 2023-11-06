@@ -1,12 +1,4 @@
 <div id="contact" class="container">
-    <div class="background-shadow">
-        <img src="assets/img/contact_shadow.png">
-    </div>
-    <div class="scroll-up">
-        <a href="#" (click)="scrollToTop()">
-            <img (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()" src="{{ scrollUpBtn }}">
-        </a>
-    </div>
     <div class="headline">
         <div class="headline-border"></div>
         <h2>Contact</h2>
@@ -114,5 +106,13 @@
             </div>
         </div>
     </div>
-    <div class="bottom-border"></div>
+    <div class="scroll-up">
+        <a href="#" (click)="scrollToTop()">
+            <img (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()" src="{{ scrollUpBtn }}">
+        </a>
+    </div>
 </div>
+<div class="background-shadow">
+    <img src="assets/img/contact_shadow.png">
+</div>
+<div class="bottom-border"></div>
