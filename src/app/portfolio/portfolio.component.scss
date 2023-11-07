@@ -8,7 +8,7 @@
 .background-shadow-left {
   position: absolute;
   z-index: -1;
-  top: 300px;
+  top: 450px;
   left: -300px;
   opacity: 0.5;
 }
@@ -145,7 +145,6 @@
 
 @media only screen and (max-width: 992px) {
   .background-shadow-left {
-    top: 450px;
     left: 50%;
     transform: translateX(-50%);
   }
