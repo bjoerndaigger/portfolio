@@ -3,7 +3,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  padding: 128px 0 0 100px;
+  padding: 96px 0 0 100px;
   max-width: 1920px;
   margin: 0 auto;
 }
@@ -12,6 +12,7 @@
   position: absolute;
   top: -300px;
   right: -400px;
+  opacity: 0.8;
 }
 
 .container-left {

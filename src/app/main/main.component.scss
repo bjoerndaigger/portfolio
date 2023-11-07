@@ -1,0 +1,11 @@
+app-title {
+  display: flex;
+  height: 100vh;
+  min-height: 800px;
+}
+
+@media only screen and (max-width: 992px) {
+  app-title {
+    min-height: 900px;
+  }
+}

@@ -34,12 +34,9 @@
 }
 
 .headline-middle {
-  // flex: 1;
-  // text-align: center;
-
   h2 {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
@@ -55,7 +52,7 @@
 
 .headline-border-right {
   border: solid 2px rgb(75, 71, 255);
-  width: 1000px;
+  width: 50vw;
   margin-right: -920px;
   margin-left: 10px;
 }

@@ -2,6 +2,10 @@
   position: relative;
   scroll-behavior: smooth;
   padding-top: 109px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100vw;
   max-width: 1920px;
   margin: 0 auto;
 }
@@ -98,6 +102,7 @@
   position: relative;
   z-index: 1;
   height: 40px;
+  margin-bottom: 32px;
 
   img {
     width: 30px;
@@ -123,7 +128,7 @@
 .scroll-down {
   position: absolute;
   right: 35px;
-  top: 770px;
+  top: 750px;
   z-index: 1;
   rotate: 90deg;
   font-size: 23px;
@@ -177,11 +182,16 @@
 
   .background-shape-mobile {
     display: block;
+    top: 420px;
   }
 
   .photo-shadow {
     left: 50%;
     transform: translateX(-50%);
+
+    img {
+      height: 600px;
+    }
   }
 
   .content-container {
@@ -190,6 +200,9 @@
 
   .container-left {
     padding-left: 0;
+    img {
+      max-height: 448px;
+    }
   }
 
   .container-right {
@@ -206,39 +219,6 @@
     }
   }
 
-  .contact-btn {
-    margin-left: 16px;
-  }
-
-  .scroll-down,
-  .email {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 768px) {
-  .container-right {
-    margin-bottom: 96px;
-  }
-}
-
-@media only screen and (max-width: 600px) {
-  .background-shape-mobile {
-    top: 466px;
-  }
-
-  .photo-shadow {
-    img {
-      height: 600px;
-    }
-  }
-
-  .container-left {
-    img {
-      max-height: 448px;
-    }
-  }
-
   .headline-left {
     font-size: 33px;
     margin-bottom: -4px;
@@ -248,12 +228,44 @@
     font-size: 29px;
   }
 
+  .contact-btn {
+    margin-left: 16px;
+  }
+
+  .scroll-down {
+    top: 800px;
+  }
+
+  .email {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
   .container-right {
-    margin-bottom: 80px;
+    margin-bottom: 96px;
+  }
+
+  .background-shape-mobile {
+    top: 450px;
+  }
+
+  .scroll-down {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .background-shape-mobile {
+    top: 470px;
   }
 }
 
 @media only screen and (max-width: 400px) {
+  .background-shape-mobile {
+    top: 500px;
+  }
+
   .headline-job {
     font-size: 21px;
     margin-top: -20px;
