@@ -1,13 +1,13 @@
 app-header {
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    background-color: rgba(20, 29, 47, 1);
-    z-index: 999;
-  }
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(20, 29, 47, 1);
+  z-index: 999;
+}
 
-  app-footer {
-      background-color: rgba(20, 29, 47, 1);
-  }
-
+app-footer {
+  display: block;
+  background-color: rgba(20, 29, 47, 1);
+}

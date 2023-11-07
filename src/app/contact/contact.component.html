@@ -37,7 +37,7 @@
                 <!-- form data email -->
                 <div class="input-container margin-top-30">
                     <input [ngClass]="{'border-green': email.valid,'border-red': email.invalid && (email.dirty || email.touched)}" type="email" #emailField name="email" placeholder="Your email" required
-                    pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}" [(ngModel)]="formData.email" #email="ngModel">
+                    pattern=".*@.*\..*[A-Za-z]+.*" [(ngModel)]="formData.email" #email="ngModel">
                          <!-- success image -->
                     <div *ngIf="email.valid" class="form-success-img">
                         <img src="assets/img/form_success.png">

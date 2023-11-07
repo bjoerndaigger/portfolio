@@ -18,12 +18,21 @@ import { animate, style, transition, trigger } from '@angular/animations';
   ]
 })
 export class HeaderComponent {
+  /**
+   * Indicates whether the mobile menu is open or closed.
+   */
   openMenu: boolean = false;
 
+    /**
+   * Toggles the state of the mobile menu.
+   */
   toggleMobileMenu(): void {
     this.openMenu = !this.openMenu;
   }
 
+   /**
+   * Scrolls to the top of the page.
+   */
   scrollToTop() {
     window.scrollTo(0, 0);
   }
