@@ -41,8 +41,8 @@
   margin-top: 24px;
   img {
     border-radius: 100%;
-    max-width: 453px;
-    max-height: 453px;
+    width: 453px;
+    height: 453px;
     border: solid 4px rgba(0, 190, 232, 1);
   }
 }
@@ -57,12 +57,13 @@
 @media only screen and (max-width: 1600px) {
   .container-right {
     img {
-      max-width: 353px;
-      max-height: 353px;
+      width: 353px;
+      height: 353px;
     }
   }
   .about-me-border {
     width: 180px;
+    margin-right: 0;
   }
 }
 
@@ -72,8 +73,8 @@
   }
   .container-right {
     img {
-      max-width: 303px;
-      max-height: 303px;
+      width: 303px;
+      height: 303px;
     }
   }
   .about-me-border {
