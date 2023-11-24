@@ -10,7 +10,7 @@ export class PortfolioComponent {
     {
       name: 'Join',
       languages: 'JavaScript | HTML | CSS',
-      description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories.',
+      description: 'Task manager inspired by the Kanban System: create, organize, and prioritize tasks with drag-and-drop functionality, while assigning users and categories.',
       img: 'assets/img/join_board.png',
       url: 'https://join.bjoerndaigger.de/',
       github: 'https://github.com/bjoerndaigger/join'
@@ -26,7 +26,7 @@ export class PortfolioComponent {
     {
       name: 'Simple CRM',
       languages: 'Angular | Firebase',
-      description: 'A very Simple Customer Relationship Management system working with CRUD functionality.',
+      description: 'A very simple Customer Relationship Management system that works with CRUD functionality.',
       img: 'assets/img/simple_crm.png',
       url: '#',
       github: '#'
