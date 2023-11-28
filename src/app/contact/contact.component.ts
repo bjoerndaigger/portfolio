@@ -99,7 +99,7 @@ export class ContactComponent {
     this.showSuccessMessage();
   }
 
-    /**
+  /**
    * Displays a success message and hides it after 3 seconds.
    */
   showSuccessMessage() {

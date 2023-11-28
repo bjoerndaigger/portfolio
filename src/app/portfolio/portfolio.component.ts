@@ -24,7 +24,7 @@ export class PortfolioComponent {
       github: 'https://github.com/bjoerndaigger/el-pollo-loco'
     },
     {
-      name: 'Simple CRM',
+      name: 'Simple CRM [Coming soon]',
       languages: 'Angular | Firebase',
       description: 'A very simple Customer Relationship Management system that works with CRUD functionality.',
       img: 'assets/img/simple_crm.png',
