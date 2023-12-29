@@ -24,12 +24,20 @@ export class PortfolioComponent {
       github: 'https://github.com/bjoerndaigger/el-pollo-loco'
     },
     {
-      name: 'Simple CRM [Coming soon]',
-      languages: 'Angular | Firebase',
+      name: 'Simple CRM',
+      languages: 'Angular | Typescript | Firebase',
       description: 'A very simple Customer Relationship Management system that works with CRUD functionality.',
       img: 'assets/img/simple_crm.png',
-      url: '#',
-      github: '#'
-    }
+      url: 'https://simple-crm.bjoerndaigger.de/',
+      github: 'https://github.com/bjoerndaigger/simple-crm'
+    },
+    {
+      name: 'Portfolio Website',
+      languages: 'Angular | Typescript | SCSS',
+      description: 'My personal website, where I present various programming projects.',
+      img: 'assets/img/portfolio.png',
+      url: 'https://bjoerndaigger.de/',
+      github: 'https://github.com/bjoerndaigger/portfolio'
+    },
   ];
 }

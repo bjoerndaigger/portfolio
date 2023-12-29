@@ -69,6 +69,7 @@
   margin-right: 100px;
   margin-top: 64px;
   gap: 128px;
+
   & h3 {
     color: rgba(75, 71, 255, 1);
   }
@@ -88,7 +89,7 @@
   width: 50%;
 
   img {
-    width: 401px;
+    width: 601px;
   }
 }
 
@@ -112,6 +113,7 @@
     text-decoration: none;
     cursor: pointer;
     transition: background-color 200ms ease-in-out;
+
     &:hover {
       background-color: rgba(0, 190, 232, 1);
     }
@@ -132,13 +134,14 @@
   .projects-container {
     gap: 96px;
   }
+
   .btn-container {
     gap: 16px;
   }
 
   .img-container {
     img {
-      width: 351px;
+      width: 501px;
     }
   }
 }
@@ -166,14 +169,12 @@
 
   .img-container {
     width: 100%;
-    img {
-      width: 401px;
-    }
   }
 
   .btn-container {
     justify-content: center !important;
     gap: 32px;
+
     & button {
       font-size: 16px;
       line-height: 19.2px;
@@ -213,7 +214,7 @@
 
   .img-container {
     img {
-      width: 351px;
+      width: 401px;
     }
   }
 }
@@ -225,7 +226,7 @@
 
   .img-container {
     img {
-      width: 301px;
+      width: 351px;
     }
   }
 
@@ -238,6 +239,7 @@
   .btn-container {
     gap: 8px;
   }
+
   .btn-blue,
   .btn-transparent {
     padding: 10px 20px !important;
