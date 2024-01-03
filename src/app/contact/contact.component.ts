@@ -70,7 +70,7 @@ export class ContactComponent {
    * @param fd - FormData containing form data to be sent.
    */
   async sendFormData(fd) {
-    await fetch('https://bjoerndaigger.de/send_mail/send_mail.php', {
+    await fetch('https://bjoerndaigger.de/send_mail.php', {
       method: 'POST',
       body: fd,
     });
