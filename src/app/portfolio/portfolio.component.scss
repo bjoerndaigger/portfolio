@@ -137,6 +137,10 @@
 
   .btn-container {
     gap: 16px;
+
+    & button {
+      font-size: 20px;
+    }
   }
 
   .img-container {
